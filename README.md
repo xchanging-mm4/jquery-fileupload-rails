@@ -6,9 +6,9 @@ jquery-fileupload-rails is a library that integrates jQuery File Upload for Rail
 
 ## Plugin versions
 
-* jQuery File Upload User Interface Plugin 6.11
-* jQuery File Upload Plugin 5.19.3
-* jQuery UI Widget 1.9.1+amd
+* jQuery File Upload User Interface Plugin 8.21
+* jQuery File Upload Plugin 5.31.1
+* jQuery UI Widget 1.10.1+amd
 
 ## Installing Gem
 
@@ -23,12 +23,12 @@ Require jquery-fileupload in your app/assets/application.js file.
 The snippet above will add the following js files to the mainfest file.
 
     //= require jquery-fileupload/vendor/jquery.ui.widget
-    //= require jquery-fileupload/vendor/load-image
-    //= require jquery-fileupload/vendor/canvas-to-blob
     //= require jquery-fileupload/vendor/tmpl
     //= require jquery-fileupload/jquery.iframe-transport
     //= require jquery-fileupload/jquery.fileupload
-    //= require jquery-fileupload/jquery.fileupload-fp
+    //= require jquery-fileupload/jquery.fileupload-process
+    //= require jquery-fileupload/jquery.fileupload-resize
+    //= require jquery-fileupload/jquery.fileupload-validate
     //= require jquery-fileupload/jquery.fileupload-ui
     //= require jquery-fileupload/locale
 
