@@ -164,9 +164,11 @@
                 if (e.isDefaultPrevented()) {
                     return false;
                 }
-                var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
-                    getFilesFromResponse = data.getFilesFromResponse ||
+                var that = $(this).data('blueimp-fileupload') || $(this).data('fileupload');
+                if (!that) {
+                    return true;
+                }
+                var getFilesFromResponse = data.getFilesFromResponse ||
                         that.options.getFilesFromResponse,
                     files = getFilesFromResponse(data),
                     template,
