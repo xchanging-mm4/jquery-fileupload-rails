@@ -330,9 +330,11 @@
                 if (e.isDefaultPrevented()) {
                     return false;
                 }
-                var that = $(this).data('blueimp-fileupload') ||
-                        $(this).data('fileupload'),
-                    deferred = that._addFinishedDeferreds();
+                var that = $(this).data('blueimp-fileupload') || $(this).data('fileupload');
+                if (!that) {
+                    return true;
+                }
+                var deferred = that._addFinishedDeferreds();
                 $.when.apply($, that._getFinishedDeferreds())
                     .done(function () {
                         that._trigger('stopped', e);
