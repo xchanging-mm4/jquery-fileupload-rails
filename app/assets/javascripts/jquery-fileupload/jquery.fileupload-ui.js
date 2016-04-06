@@ -148,14 +148,14 @@
                     // In lack of an indeterminate progress bar, we set
                     // the progress to 100%, showing the full animated bar:
                     data.context
-                        .find('.progress').addClass(
+                        .find('.progress:visible').addClass(
                             !$.support.transition && 'progress-animated'
                         )
                         .attr('aria-valuenow', 100)
-                        .children().first().css(
-                            'width',
-                            '100%'
-                        );
+                        .children().first().css({
+                            'width': '100%',
+                            'display': 'block',
+                        });
                 }
                 return that._trigger('sent', e, data);
             },
